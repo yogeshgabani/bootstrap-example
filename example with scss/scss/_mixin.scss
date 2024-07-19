@@ -1,0 +1,121 @@
+@mixin drop-menu-header {
+            background-color: #292d5a;
+            width: 300px;
+            margin: 10px auto;
+            left: -250px !important;
+            top: 24px !important;
+}
+@mixin input-search  {
+    background-color: #323a67;
+    width: 250px;
+    padding: 11px 14px;
+    border-radius: 25px;
+    input {
+        border-style: none;
+        background-color: transparent;
+        outline: none;
+        color: #5c6dc0;
+
+    }
+    input::placeholder {
+        color: #5c6dc0;
+        font-size: 14px;
+    }
+    i {
+        color: #ffffff;
+    }
+}
+
+@mixin right-tab-title{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+        h4 {
+            font-size: 18px;
+        }
+        i {
+            font-size: 20px;
+            &:hover {
+                cursor: pointer;
+                color: #357ffa;
+            }
+        }
+}
+
+@mixin tab-btn {
+    .nav-tabs .nav-link.active {
+        border: none;
+        color: #ffffff;
+        background-color: #357ffa;
+    }
+    .nav-tabs .nav-link {
+        border: none;
+        background-color: #323a67;
+        color: #5c6dc0;
+        border-radius: 0;
+    }
+    .nav-tabs {
+        border-bottom: none !important;
+        border-radius: none !important;
+    }
+}
+
+
+@mixin chat-tab-hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    &:hover {
+        background-color: #323a67;
+        cursor: pointer;
+    }
+}
+
+@mixin chat-user-info-detail {
+    h6 {
+        font-size: 13px;
+        display: inline;
+    }
+    p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .chat-time {
+        color: #5c6dc0;
+        font-size: 12px;
+        float: right;
+    }
+    .delete-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 10px;
+    }
+}
+
+@mixin toggle-btn {    
+        padding: 10px 0 !important;
+        .form-check-label {
+            font-size: 14px;
+        }
+        .form-check-input {
+            width: 54px;
+            height: 28px;
+            background-color: #323a67;
+            border: none;
+        }
+        .form-check-input:checked {
+            background-color: #357ffa;;
+            border-color: none;
+        }
+        .form-check-input:focus {
+            box-shadow: none ;
+        }
+}
+
+@mixin bg-blue {
+    background-color: #323a67;
+    color: #5c6dc0;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: calc(2.25rem + 2px);
+    border-radius: 8px;
+}

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./home.css">
+    <title>Adminor website</title>
+</head>
+<body>
+    <!-- main side bar -->
+    <div class="d-flex">
+        <!-- side bar -->
+        <div class="side-bar-menu bg-white position-relative">
+            <div class="main-side-bar position-fixed d-flex justify-content-center align-items-center bg-white" style="height: 61px;">
+                <img src="./images/desktop-logo.png" height="48px" alt="">
+            </div>
+            <div class="simplebar-menu position-fixed bg-white">
+                <div class="account-name text-center">
+                    <img src="./images/5.jpg" width="64px" height="64px" class="img-fluid rounded-circle" alt="">
+                    <h2 class="m-0 mt-1">Joyice Stewar</h2>
+                    <p class="m-0">Web Designer</p>
+                </div>
+                <div class="list-side-menu">
+                    <ul class="list-unstyled m-0 mb-3"> 
+                        <li class="active">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-house"></i>
+                                <h4 class="m-0">Dashboards</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-building"></i>
+                                <h4 class="m-0">Advanced UI</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-brands fa-app-store-ios"></i>
+                                <h4 class="m-0">Apps</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-list-check"></i>
+                                <h4 class="m-0">Forms</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-file"></i>
+                                <h4 class="m-0">Pages</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <h4 class="m-0">Authentication</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="data-form position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-table-cells"></i>
+                                <h4 class="m-0">Tables</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-outdent"></i>
+                                <h4 class="m-0">Utilities</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-list-ul"></i>
+                                <h4 class="m-0">Nested Menu</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h4 class="m-0">Maps</h4>
+                                <i class="arrow-right position-absolute fa-solid fa-chevron-right"></i>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="position-relative d-flex align-items-center gap-2">
+                                <i class="fa-regular fa-face-smile"></i>
+                                <h4 class="m-0">Icons</h4>
+                            </div>
+                        </li>
+                    </ul>
+        
+                </div>
+            </div>
+        </div>
+
+        <!-- dash board main -->
+        <div class="main-header position-relative">
+            <div class="menu-bar d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="./images/toggle-white.png" class="d-lg-none d-block" width="30px" height="32px" alt="">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="list-icon">
+                    <ul class="list-unstyled m-0 d-flex align-items-center gap-3">
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                        <li class="contry-logo">
+                            <div class="dropdown">
+                                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./images/us_flag.jpg" width="28px;" height="28px;" class="rounded-circle" alt="">
+                                </button>
+                                <ul class="dropdown-menu bg-white">
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/us_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">English</a></li>
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/spain_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">Spanish</a></li>
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/french_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">French</a></li>
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/germany_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">German</a></li>
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/italy_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">Italian</a></li>
+                                  <li class=""><a class="d-flex align-items-center gap-2 dropdown-item" href="#"><img src="./images/russia_flag.jpg" width="16px;" height="16px;" class="rounded-2" alt="">Russian</a></li>
+                                </ul>
+                              </div>
+                        </li>
+                        <li><i class="fa-regular fa-moon"></i></li>
+                        <li class="d-sm-block d-none cart-note position-relative"><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li class="d-sm-block d-none email-note position-relative"><i class="fa-regular fa-envelope"></i></li>
+                        <li class="d-sm-block d-none bel-note position-relative"><i class="fa-regular fa-bell"></i></li>
+                        <li class="d-sm-block d-none" ><i class="fa-solid fa-qrcode"></i></li>
+                        <li class="d-md-block d-none" ><i class="fa-solid fa-expand"></i></li>
+                        <li><img src="./images/9.jpg" width="28px" height="28px" class="rounded-circle" alt=""></li>
+                        <li class="switch-icon" ><i class="fa-solid fa-gear"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- dash board -->
+            <div class="dashboard-main">
+                <div class="dashboard d-flex justify-content-between align-items-center">
+                    <div class="page-title">
+                        <h1 class="text-white m-0">Dashboard-1</h1>
+                    </div>
+                    <div class="order-list">
+                        <ol class="list-unstyled d-flex align-items-center gap-3 text-white m-0">
+                            <li>Home</li>
+                            <li class="break-point position-relative">Dashboard-1</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-box" style="padding: 0 20px;">
+                <div class="row">
+                    <div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body dash-one d-flex align-items-center justify-content-between gap-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="circle-icon bg-primary shadow-primary position-relative d-flex justify-content-center align-items-center">
+                                        <i class="text-white fa-regular fa-user"></i>
+                                        <img src="./images/media-104.svg" class="img-card" alt="">
+                                    </div>
+                                    <div class="followers">
+                                        <h4 class="m-0">Followers</h4>
+                                        <div class="d-flex gap-2 align-items-center" style="color: rgb(33 37 41 / 75%);">
+                                            <span class="follo-box">65%</span>
+                                            <span>last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h5 class="m-0">10,257</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body dash-one d-flex align-items-center justify-content-between gap-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="circle-icon bg-second shadow-second position-relative d-flex justify-content-center align-items-center">
+                                        <i class="text-white fa-regular fa-thumbs-up"></i>
+                                        <img src="./images/media-104.svg" class="img-card" alt="">
+                                    </div>
+                                    <div class="followers">
+                                        <h4 class="m-0">Likes</h4>
+                                        <div class="d-flex gap-2 align-items-center" style="color: rgb(33 37 41 / 75%);">
+                                            <span class="follo-box">65%</span>
+                                            <span>last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h5 class="m-0">17,257</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body dash-one d-flex align-items-center justify-content-between gap-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="circle-icon bg-three shadow-three position-relative d-flex justify-content-center align-items-center">
+                                        <i class="text-white fa-regular fa-comment"></i>
+                                        <img src="./images/media-104.svg" class="img-card" alt="">
+                                    </div>
+                                    <div class="followers">
+                                        <h4 class="m-0">Comments</h4>
+                                        <div class="d-flex gap-2 align-items-center" style="color: rgb(33 37 41 / 75%);">
+                                            <span class="follo-two">65%</span>
+                                            <span>last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h5 class="m-0">157</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body dash-one d-flex align-items-center justify-content-between gap-1">
+                                <div class="d-flex align-items-center gap-2">                                    
+                                    <div class="circle-icon bg-four shadow-four position-relative d-flex justify-content-center align-items-center">
+                                        <i class="text-white fa-solid fa-signs-post"></i>
+                                        <img src="./images/media-104.svg" class="img-card" alt="">
+                                    </div>
+                                    <div class="followers">
+                                        <h4 class="m-0">Posts</h4>
+                                        <div class="d-flex gap-2 align-items-center" style="color: rgb(33 37 41 / 75%);">
+                                            <span class="follo-two">65%</span>
+                                            <span>last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h5 class="m-0">1403</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chart and tasks report -->
+            <div class="chart-box" style="padding: 0 20px;">
+                <div class="row">
+                        <div class="col-xl-8 col-md-12 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="card-header-title d-flex justify-content-between align-items-center">
+                                        <div class="">
+                                            <h5 class="card-title m-0">Sales Report</h5>
+                                        </div>
+                                        <div>
+                                            <button class="sales-btn">Week</button>
+                                            <button class="sales-btn active">Month</button>
+                                            <button class="sales-btn">Year</button>
+                                        </div>
+                                    </div>
+                                    <div class="chartcard">
+                                        <div class="chartbox">
+                                            <canvas id="myChart"></canvas>                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- task progress report -->
+                        <div class="task-progress col-xl-4 col-md-6 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="card-header-title">
+                                        <div class="">
+                                            <h5 class="card-title m-0">All Tasks</h5>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Sales Report</span>
+                                            <span>95%</span>
+                                        </div>
+                                        <div class="progress-one progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Revert Messages</span>
+                                            <span>50%</span>
+                                        </div>
+                                        <div class="progress-two progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>List Completion</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="progress-three progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Purchase Report</span>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="progress-four progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 45%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Revert Messages</span>
+                                            <span>75%</span>
+                                        </div>
+                                        <div class="progress-five progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-task">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Total Profit</span>
+                                            <span>50%</span>
+                                        </div>
+                                        <div class="progress-six progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sales summery -->
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="card-header-title">
+                                    <div class="">
+                                        <h5 class="card-title m-0">All Tasks</h5>
+                                    </div>
+                                    </div>
+                                    <div class="sales-box position-relative z-1">
+                                    <div class="sales-summery d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="sales-icon text-white d-flex justify-content-center align-items-center" style="background-color: rgb( 98,58,162);">
+                                                <i class="fa-solid fa-signal"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="m-0">Total Revenue</h4>
+                                                <p class="m-0">weekly profit</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="m-0" style="color: rgb( 98,58,162);">$15300</h3>
+                                            <p class="m-0" style="font-size: 12px;">75% increased</p>
+                                        </div>
+                                    </div>
+                                    <div class="sales-summery d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="sales-icon text-white d-flex justify-content-center align-items-center" style="background-color: rgb(33,165,68);">
+                                                <i class="fa-solid fa-wallet"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="m-0">Total Tax</h4>
+                                                <p class="m-0">weekly profit</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="m-0" style="color: rgb(33,165,68);">$17300</h3>
+                                            <p class="m-0" style="font-size: 12px;">62% increased</p>
+                                        </div>
+                                    </div>
+                                    <div class="sales-summery d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="sales-icon text-white d-flex justify-content-center align-items-center" style="background-color: rgb(255,193,7);">
+                                                <i class="fa-solid fa-hourglass-start"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="m-0">Total Income</h4>
+                                                <p class="m-0">weekly profit</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="m-0" style="color: rgb(255,193,7);">$14300</h3>
+                                            <p class="m-0" style="font-size: 12px;">55% increased</p>
+                                        </div>
+                                    </div>
+                                    <div class="sales-summery d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="sales-icon text-white d-flex justify-content-center align-items-center" style="background-color: rgb(246,107,78);">
+                                                <i class="fa-regular fa-face-smile"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="m-0">Total Expanses</h4>
+                                                <p class="m-0">weekly profit</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="m-0" style="color: rgb(246,107,78);">$44300</h3>
+                                            <p class="m-0" style="font-size: 12px;">25% increased</p>
+                                        </div>
+                                    </div>
+                                    <div class="sales-summery d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="sales-icon text-white d-flex justify-content-center align-items-center" style="background-color: rgb(38,108,202);">
+                                                <i class="fa-solid fa-download"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="m-0">Customer Visitors</h4>
+                                                <p class="m-0">weekly profit</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="m-0" style="color: rgb(38,108,202);">$14300</h3>
+                                            <p class="m-0" style="font-size: 12px;">45% increased</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- task assigned -->
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="card-header-title">
+                                        <div class="">
+                                            <h5 class="card-title m-0">Task Assigned</h5>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/1.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Dennis Dalpiaz</h4>
+                                                    <p class="m-0">Add a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">AngularJS Template</h3>
+                                                <p class="m-0">30 mins ago</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/5.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Joey Coronel</h4>
+                                                    <p class="m-0">Added a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">Free HTML Template</h3>
+                                                <p class="m-0">30 mins ago</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/8.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Norbert Bridwell</h4>
+                                                    <p class="m-0">Add a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">Free HTML Template</h3>
+                                                <p class="m-0">40 mins ago</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/9.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Bredwell jorbert</h4>
+                                                    <p class="m-0">Add a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">New UI Dashboards</h3>
+                                                <p class="m-0">40 mins ago</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/12.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Predwell robert</h4>
+                                                    <p class="m-0">Add a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">AngularJS Template</h3>
+                                                <p class="m-0">40 mins ago</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="">
+                                                    <img src="./images/15.jpg" class="rounded-circle img-fluid" width="42px" height="42px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >John Alzebeth</h4>
+                                                    <p class="m-0">Add a new projects</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">Free HTML Template</h3>
+                                                <p class="m-0">40 mins ago</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- recent transactions -->
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="card-header-title">
+                                        <div class="">
+                                            <h5 class="card-title m-0">Recent Transactions</h5>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="recent-trans d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(33 165 68 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb(33,165,68);">O</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Oscar Nommanee</h4>
+                                                    <p class="m-0">App improvement</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$45.234<i class="fa-solid fa-turn-up ps-2" style="color: rgb(33,165,68);"></i></h3>
+                                                <p class="m-0">12 Jan 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(246 107 78 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb(246,107,78);">W</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Wayde N. Thabalanz</h4>
+                                                    <p class="m-0">Milestone</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$23.524<i class="fa-solid fa-turn-down ps-2" style="color: rgb(231,11,11);"></i></h3>
+                                                <p class="m-0">20 Jan 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(38 108 202 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb(38,108,202);">D</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Dozeaplikayshun Wynn</h4>
+                                                    <p class="m-0">Sales executive</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$78.004<i class="fa-solid fa-turn-up ps-2" style="color: rgb(33,165,68);"></i></h3>
+                                                <p class="m-0">4 Apr 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(98 58 162 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb( 98,58,162 );">J</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >John alezet</h4>
+                                                    <p class="m-0">Sales executive</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$74.644<i class="fa-solid fa-turn-down ps-2" style="color: rgb(231,11,11);"></i></h3>
+                                                <p class="m-0">4 Apr 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(246 107 78 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb(246,107,78);">P</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Polly Wannakrakouer</h4>
+                                                    <p class="m-0">Milestone2</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$37.284<i class="fa-solid fa-turn-down ps-2" style="color: rgb(33,165,68);"></i></h3>
+                                                <p class="m-0">4 Apr 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="task-summery d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="recent-one rounded-circle d-flex justify-content-center align-items-center" style="background-color: rgb(255 193 7 / 10%);">
+                                                    <span class="text-center fw-bolder" style="color: rgb(255,193,7);">C</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-0" >Con Staninterupshuns</h4>
+                                                    <p class="m-0">App improvement</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <h3 class="m-0" style="color: #333335;">$25.341<i class="fa-solid fa-turn-down ps-2" style="color: rgb(231,11,11);"></i></h3>
+                                                <p class="m-0">4 Apr 2020</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+            <!-- invoice and date section -->
+            <div class="date-invoice-box" style="padding: 0 20px;">
+                <div class="row">
+
+                    <!-- date box detail -->
+                    <div class="col-xl-3 col-md-12 mb-3 mb-sm-0">
+                      <div class="card">
+                        <div class="card-body p-0">
+                          <div class="weather-card ">
+                            <div class="top text-white">
+                                <div class="wrapper">
+                                    <div class="icon-weather d-flex justify-content-between">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                        <i class="fa-solid fa-gear"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="">Today</h2>
+                                    </div>
+                                    <div class="temp-detail d-flex justify-content-center align-items-baseline">
+                                        <i class="fa-solid fa-cloud-showers-heavy"></i>
+                                        <p class="m-0">27<span class="degree">0</span>C</p>
+                                    </div>
+                                    <div>
+                                        <p class="m-0" style="font-size: 18px;">Partly cloudy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weather-list">
+                                <i class="uparrow fa-solid fa-chevron-up"></i>
+                                <div>
+                                    <ul class="forecast m-0 list-unstyled">
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h4 class="m-0">Sunny</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <i class="fa-regular fa-sun"></i>
+                                                <p class="m-0">27<span class="degree">0</span><span class="temp">C</span></p>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h4 class="m-0">Wind</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-cloud"></i>
+                                                <p class="m-0">73<span class="degree">0</span><span class="temp">C</span></p>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h4 class="m-0">Rain</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-cloud-rain"></i>
+                                                <p class="m-0">32<span class="degree">0</span><span class="temp">C</span></p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- invoice table -->
+                    <div class="col-xl-9 col-md-12">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="card-header-title">
+                                    <div class="">
+                                        <h5 class="card-title m-0">Invoice Table</h5>
+                                    </div>
+                                </div>
+                                <div class="data-table-list overflow-auto">
+                                    <div class="invoice-table">
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">Invoice ID</th>
+                                                <th scope="col">Customer Name</th>
+                                                <th scope="col">Customer ID</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Order Value</th>
+                                                <th scope="col">Status</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>#002584611</td>
+                                                <td>Joan Powell</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$450,870</td>
+                                                <td><span class="bg-orange">Pending</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004641215</td>
+                                                <td>Gavin Gibson</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$230,540</td>
+                                                <td><span class="bg-red">Failed</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004651234</td>
+                                                <td>Junior Sam</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$43,198</td>
+                                                <td><span class="bg-green">Pending</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#00434567</td>
+                                                <td>Gabriel</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$230,540</td>
+                                                <td><span class="bg-orange">Pending</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004345623</td>
+                                                <td>Zach efron</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$55,300</td>
+                                                <td><span class="bg-green">Paid</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004345234</td>
+                                                <td>Mona matty</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$234,100</td>
+                                                <td><span class="bg-green">Paid</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004345623</td>
+                                                <td>Zach efron</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$55,300</td>
+                                                <td><span class="bg-green">Paid</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>#004641215</td>
+                                                <td>Gavin Gibson</td>
+                                                <td>JoanPowell@gmail.com</td>
+                                                <td>08/3/2021</td>
+                                                <td>$230,540</td>
+                                                <td><span class="bg-red">Failed</span></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                         </div>
+                    </div>
+                  </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- footer section -->
+    <footer class="footer text-center bg-white py-3 mt-auto">
+        <div class="container">
+        <p class="m-0"> Copyright © <span>2024 </span><span class="text-dark fw-medium">Adminor</span>. Designed with <i class="fa-solid fa-heart text-danger"></i> by <span class="fw-medium text-decoration-underline" style="color: #623aa2;">Spruko</span> All rights reserved </p>
+        </div>
+
+    </footer>
+</body>
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./chart.js"></script>

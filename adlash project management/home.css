@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    --wp--font-size--12: 12px;
+    --wp--font-size--13: 13px;
+    --wp--font-size--14: 14px;
+    --wp--font-size--15: 15px;
+    --wp--font-size--16: 16px;
+    --wp--font-size--18: 18px;
+    --wp--font-size--20: 20px;
+    --wp--font-size--22: 22px;
+    --wp--font-size--24: 24px;
+    --wp--font-size--26: 26px;
+    --wp--font-size--28: 28px;
+    --wp--bg--white: #FFFFFF;
+    --wp--bg--dark-green: #e9F1EF;
+    --wp--bg--dark-red: #F3EBEB;
+    --wp--bg--dark-blue: #F4F3F7;
+    --wp--bg--green: #06B48A;
+    --wp--bg--blue: #6560F0;
+    --wp--bg--darkblue: #f5f4fa;
+    --wd--text-color-blue: #6560F0;
+    --wd--text-color-green: #06B48A;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--wp--bg--darkblue);
+}
+.side-bar {
+    background-color: #2B2A3F;
+    padding: 30px;
+    width: 280px;
+}
+.logo-img {
+    border-bottom: 1px solid #3c3a56;
+    padding-bottom: 30px;
+}
+.logo-img span {
+    font-size: 22px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+}
+.side-bar-menu {
+    padding-top: 30px;
+}
+.side-bar-menu ul li {
+    color: #BCBBC7;
+    font-size: var(--wp--font-size--16);
+    margin-bottom: 22px;
+}
+.dropdown-icon {
+    top: 7px;
+    right: 0;
+    font-size: 14px;
+}
+.side-bar-menu ul li:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+.app-detail span {
+    color: #706E93;
+    margin: 32px 0 25px 0;
+    font-size: var(--wp--font-size--12);
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+.side-menu-scroll{
+    height: 100%;
+    padding: 0px 30px;
+    overflow-y: scroll;
+    width: 280px;
+    left: 0;
+    background-color: #2B2A3F;
+}
+/* scroll bar */
+/* width */
+.side-menu-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  .side-menu-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #000; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .side-menu-scroll::-webkit-scrollbar-thumb {
+    background: #6d6c7d; 
+    border-radius: 10px;
+  }
+  .main-box {
+    background-color: var(--wp--bg--darkblue);
+    padding-right: 40px;
+    width: calc(100% - 280px);
+    padding: 25px;
+  }
+  .menu-bar {
+    padding: 17px 30px 15px 20px;
+  }
+  .search-box input {
+    padding: 9px 15px;
+    background-color: #f5f4fa;
+    outline: none;
+    border: none;
+  }
+  .search-box input::placeholder {
+    font-size: var(--wp--font-size--12);
+  }
+  .search-btn {
+    padding: 12px 20px;
+    background-color: var(--wp--bg--blue);
+    font-size: var(--wp--font-size--14);
+    border: none;
+  }
+  .langage-drop .btn-secondary {
+    background-color: transparent !important;
+    color: #79788E !important;
+    font-size: var(--wp--font-size--14);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+  }
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  .langage-drop .dropdown-menu {
+        box-shadow: 0 4px 34px rgba(101,96,240,.1);
+        background-color: #ffffff !important;
+  }
+  .dropdown-menu h5 {
+    font-size: var(--wp--font-size--14);
+    padding: 20px 0;
+    border-bottom: 1px dashed #e7e2e2 !important;
+  }
+  .langage-drop ul li {
+    border-bottom: 1px dashed #e7e2e2 !important;
+    padding: 10px 10px;
+  }
+  .langage-drop .dropdown-menu li:last-child {
+    border-bottom: none !important;
+}
+.dark-mode {
+    background-color: #f2f1f9;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.dark-mode i {
+    color: var(--wp--bg--blue);
+}
+.dark-mode:hover{
+    background-color: var(--wp--bg--blue);
+    cursor: pointer;
+}
+.dark-mode:hover i {
+    color: #ffffff;
+}
+.search-menu i, .dash-board i, .email-icon i, .bell-icon i {
+    font-size: var(--wp--font-size--20)
+}
+.search-menu i:hover, .dash-board i:hover, .email-icon i:hover, .bell-icon i:hover {
+    color: var(--wd--text-color-blue);
+    cursor: pointer;
+}
+.email-icon i::after {
+    content: "1";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--wd--text-color-green);
+    font-size: 8px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bell-icon i::after {
+    content: "3";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--wd--text-color-blue);
+    font-size: 8px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-data p {
+    font-size: var(--wp--font-size--13);
+}
+.admin-data h5 {
+    font-size: var(--wp--font-size--14);
+}
+.admin-data h5 {
+    color: #4c4a68;
+}
+.admin-data p {
+    color: #a2a1bb;
+}
+.active-project-box {
+  padding: 25px 0;
+}
+
+/* sticky  */
+.menu-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
+.project-box {
+  border: none !important;
+}
+.project-box .card-body, .task-overview {
+  padding: 25px !important;
+}
+.box-size {
+  width: 78px;
+  height: 78px;
+  font-size: 32px;
+  background: #f8f8fb;
+}
+.box-size i {
+  font-size: var(--wp--font-size--26);
+}
+.active-title h4, .active-title h6 {
+  color: #9c9ab6;
+}
+.active-title h4, .active-title h6, .progress-view p, .active-title p, .icon-circle i, .icon-title h5, .icon-title p, .calender-list ul li, .schedule-link a, .review-list ul li, .view-btn button, .footer-area p, .footer-area ul li {
+  font-size: var(--wp--font-size--14);
+}
+.active-title h3 {
+  font-size: var(--wp--font-size--28);
+  color: #2b2a3f;
+}
+.active-title p {
+  padding: 2px 8px;
+  width: max-content;
+}
+.progress-view, .img-user-logo {
+  padding-top: 30px;
+}
+.progress-view .progress-bar {
+  background-color: var(--wd--text-color-blue);
+}
+.progress-view .progress, .progress-two .progress {
+  background-color: #f2f1f9;
+}
+.progress-two .progress-bar {
+  background-color: var(--wd--text-color-green);
+}
+.progress-three .progress-bar {
+  background-color: #6fd3f7;
+}
+
+.img-user-logo div {
+    width: 45px;
+    height: 45px;
+    margin-right: -20px;
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0 4px 4px rgba(101, 96, 240, .1));
+}
+.task-heading {
+  padding-bottom: 25px;
+}
+.task-heading h5 {
+  font-size: var(--wp--font-size--20);
+  color: #2b2b3f;
+  font-weight: 700 !important;
+}
+.drop-chart-menu .btn {
+  color: #8e8da2;
+  border: 1px solid #d6d4ec;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: var(--wp--font-size--14);
+}
+.drop-chart-menu .dropdown-menu {
+  width: max-content !important;
+}
+.acc-bar {
+  margin: 0 3px;
+}
+
+/* chart */
+.row {
+  display: flex;
+}
+.cell {
+  padding: 20px 35px 30px 35px;
+}
+.sd-graph::before {
+  font-family: "Red Hat Display", sans-serif !important;
+}
+.sd-chart, .schedule-link a {
+  --bar-color: #6560f0 !important;
+  color: #6560F0 !important;
+}
+#chart2.sd-bar {
+  --background-size: 50px 145.6px, 50px 104px, 50px 187.2px, 50px 46.8px, 50px 78px, 50px 260px, 50px 50px, 50px 72.8px !important;
+  --background-position-x: 30px, 150px, 268px, 383px, 502px, 622px, 742px, 855px !important;
+}
+.icon-circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #f3f7f9;
+  border-radius: 50%;
+  margin: 1px;
+}
+.back-icon {
+  top: 26%;
+  right: 0;
+}
+.pie-chart .card {
+  height: 560px;
+}
+.act-icon-data {
+  padding-bottom: 20px;
+}
+.main-box-icon::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 440px;
+  border-left: 1px dotted #9c9ab6;
+}
+.calender-list ul li.active {
+  background-color: #6560f0;
+  color: #ffffff !important;
+}
+.calender-list ul li {
+  border-radius: 30px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #9c9ab6;
+}
+.calender-list ul {
+    border-bottom: 1px dashed #d9e9ef;
+    padding-bottom: 20px;
+}
+.schedule-one {
+  padding: 20px 15px 20px 20px;
+  border-left: 4px solid var(--wp--bg--blue);
+  background-color: #f2f1f9;
+}
+.schedule-two {
+  padding: 20px 15px 20px 20px;
+  border-left: 4px solid #6fd3f7;
+  background-color: #f3f7f9;
+}
+.schedule-three {
+  padding: 20px 15px 20px 20px;
+  border-left: 4px solid #06b48a;
+  background-color: #ecf3f2;
+}
+.schedule-four {
+  padding: 20px 15px 20px 20px;
+  border-left: 4px solid var(--wp--bg--blue);
+  background-color: #f2f1f9;
+}
+.schedule-link h4, .schedule-time-two h4 {
+  font-size: var(--wp--font-size--16);
+}
+.schedule-link a:hover {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.schedule-icon {
+  width: 28px; height: 28px;
+  background-color: var(--wp--bg--blue);
+}
+.schedule-time h4 {
+  font-size: var(--wp--font-size--18);
+}
+.schedule-link h4, .schedule-time-two h4, .schedule-time h4 {
+  color: #2b2a3f;
+}
+.schedule-time-two p {
+  color: #8e8da1;
+  font-size: var(--wp--font-size--12);
+}
+.view-btn button {
+  padding: 7px 15px;
+  color: #8e8da2;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: none;
+}
+.view-btn button:hover {
+  color: #ffffff;
+  background: #6560F0 !important;
+  cursor: pointer;
+}
+.static-table table th {
+  color: #9998b4;
+  font-size: var(--wp--font-size--13);
+  font-weight: 500;
+}
+.table th, .table td {
+  border-bottom: .5px dashed #d9e9ef;
+}
+.static-table table tbody tr td {
+  padding: 15px 15px 15px 0;
+  color: #2b2a3f !important;
+  font-size: var(--wp--font-size--16);
+  font-weight: 500 !important;
+}
+.static-table table tbody tr td {
+  padding: 15px;
+}
+.img-user-logo-table div {
+  width: 28px;
+  height: 28px;
+  margin-right: -10px;
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0 4px 4px rgba(101, 96, 240, .1));
+}
+.table-status {
+  font-size: 13px;
+  background-color: #f4f3f7!important;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 7px 10px;
+  width: max-content;
+}
+.static-table table tbody tr td .progress {
+  height: 6px !important;
+
+}
+.static-table table tbody tr td .progress-bar {
+  background-color: #6560f0 !important;
+}
+.list-input .input-group .input-group-text input {
+  width: 20px !important;
+  height: 20px !important;
+}
+.list-input .input-group .input-group-text {
+  border: none !important;
+  background: #ffffff !important;
+}
+.list-input span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b2a3f;
+}
+.list-check-box ul li {
+  border-top: 1px dashed #d9e9ef;
+  padding-top: 19.1px;
+  padding-bottom: 19.1px;
+}
+.task-info {
+  background: #f3f7f9;
+  border-radius: 50px;
+  margin-left: 5%;
+  padding-right: 15px;
+}
+.user-list {
+  padding: 4px;
+  margin-right: 100px;
+  border-radius: 50px;
+  background-color: #6fd3f7;
+}
+.img-user-logo-task div {
+  width: 31px;
+  height: 31px;
+  margin-right: -10px;
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0 4px 4px rgba(101, 96, 240, .1));
+}
+.task-detail ul li {
+  padding: 17px;
+  border-top: 1px dashed #d9e9ef;
+}
+.task-info-one {
+  margin-left: 25%;
+}
+.task-info-one .user-list {
+  background-color: #6560f0;
+}
+.task-info-two {
+  margin-left: 45%;
+}
+.task-info-two .user-list {
+  background-color: #06b48a;
+}
+.task-info-three {
+  margin-left: 10%;
+}
+.task-info-three .user-list {
+  background-color: rgb(218 53 69);
+}
+.task-info-four {
+  margin-left: 40%;
+}
+.task-info-four .user-list {
+  background-color: #f3c44c;
+}
+.footer-area {
+  padding: 25px 40px;
+}
+.footer-area p, .footer-area ul li {
+  color: #8e8da2;
+}
+.footer-area ul li {
+  margin-right: 11px;
+}
+ #donutchart svg rect {
+  fill: transparent !important;
+}
+.card {
+  border: none;
+}
+
+
+
+
+
+
+
+
+@media (max-width:1199px) {
+  .admin-data {
+    display: none;
+  }
+  .active-project-box {
+    padding-top: 0px;
+  }
+  .side-bar {
+    display: none;
+  }
+  .main-box {
+    width: 100%;
+  }
+  .static-table {
+    overflow: hidden;
+    overflow-x: scroll;
+    
+  }
+  .static-table table {
+    min-width: 1024px;
+  }
+  
+}
+
+
+@media (max-width:1024px) {
+  
+
+  
+  
+}
+@media (max-width:992px) {
+  .task-info-one, .task-info, .task-info-two, .task-info-three {
+    margin-left: 0;
+    width: 100%;
+  }
+  .list-input span {
+    font-size: var(--wp--font-size--14)
+  }
+  .static-table table tbody tr td {
+    font-size: var(--wp--font-size--15);
+  }
+  #chart2.sd-bar {
+    --background-size: 30px 145.6px, 30px 104px, 30px 187.2px, 30px 46.8px, 30px 78px, 30px 260px, 30px 50px, 30px 72.8px !important;
+    --background-position-x: 20px, 90px, 160px, 240px, 300px, 370px, 440px, 520px !important;
+  }
+  
+
+  
+  
+}
+
+@media (max-width:768px) {
+  #chart2.sd-bar {
+    --background-size: 20px 145.6px, 20px 104px, 20px 187.2px, 20px 46.8px, 20px 78px, 20px 260px, 20px 50px, 20px 72.8px !important;
+    --background-position-x: 10px, 50px, 90px, 140px, 180px, 220px, 260px, 310px !important;
+  }
+  .pie-chart .card {
+    height: max-content;
+  }
+  .task-heading .row .cell {
+    overflow-x: scroll !important;
+    overflow: hidden;
+    max-width: 700px;
+  }
+  #donutchart div div div {
+    left: -100px !important;
+  } 
+
+  
+}
+@media (max-width:524px) {
+  .user-list {
+    margin-right: 0;
+  }
+  .review-list ul {
+    flex-wrap: wrap;
+    gap: 0 !important;
+  }
+  #chart2.sd-graph:after {
+    display: none;
+  }
+  .view-btn, .schedule-one, .schedule-four, .schedule-three, .schedule-two {
+    flex-wrap: wrap;
+  }
+  .search-box input {
+    width: 160px;
+  }
+  .search-btn {
+    margin-left: -35px !important;
+    padding: 10px 10px;
+  }
+  .main-box {
+    padding: 22px;
+  }
+  .menu-bar, .actve-tab, .task-detail ul li, .footer-area, .list-check-box ul li, .schedule-one, .schedule-four, .schedule-three, .schedule-two {
+    padding: 10px 10px 10px 10px;
+  }
+  .acc-img img {
+    width: 30px; height: 30px;
+  }
+  .acc-detail .card-body {
+    gap: 10px !important;
+  }
+  .project-box {
+    padding: 0;
+  }
+  .project-box .card-body, .task-overview {
+    padding: 15px !important;
+  }
+  .active-title h3 {
+  font-size: 22px;
+  }
+  .task-heading h5 {
+    font-size: 16px;
+  }
+  .icon-title h5, .list-input span, .footer-area p {
+    font-size: 12px;
+  }
+  .user-list span {
+    padding-right: 20px !important;
+  }
+
+  
+}

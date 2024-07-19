@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="./scss/index.css">
+        <title>Mylo example with scss</title>
+    </head>
+    <body>
+        <div class="main-header d-flex position-relative">
+            <!-- side bar -->
+            <div class="side-bar">
+                <div class="position-fixed  overflow-y-auto side-menu" id="open-side-menu">
+                    <div class="position-relative logo-img d-flex justify-content-center align-items-center">
+                        <img src="./images/mylo-logo-5A.png" alt="">
+                        <i class="close-btn-sidemenu fa-solid fa-xmark position-absolute text-white" onclick="onclickmenu()"></i>
+                    </div>
+                    <div class="side-menu-bar">
+                        <ul class="list-unstyled m-0" id="toggle">
+                            <li class=" text-capitalize fw-bold sub-btn" >
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-list-ul" style="margin-right: 20px;"></i>
+                                    <span>dashboard</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Project Management</li>
+                                    <li>Client Management</li>
+                                    <li>Social Media</li>
+                                    <li>Crypto Currency</li>
+                                    <li>Web Analytics</li>
+                                </ul>
+                            </li>
+                            <li class="text-capitalize fw-bold sub-btn" >
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-list-ul" style="margin-right: 20px;"></i>
+                                    <span>widgets</span>
+                                </div>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative ">
+                                    <i class="fa-solid fa-grip-lines" style="margin-right: 20px;"></i>
+                                    <span>basic UI elements</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Accordions</li>
+                                    <li>Alerts</li>
+                                    <li>Buttons</li>
+                                    <li>Breadcrumbs</li>
+                                    <li>Badges</li>
+                                    <li>Cards</li>
+                                    <li>Progress Bars</li>
+                                    <li>Pre-loaders</li>
+                                    <li>Pagination</li>
+                                    <li>Tabs</li>
+                                    <li>Typography</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative ">
+                                    <i class="fa-solid fa-right-to-bracket" style="margin-right: 20px;"></i>
+                                    <span>advanced UI elements</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Draggables</li>
+                                    <li>Sliders</li>
+                                    <li>Buttons</li>
+                                    <li>Modals</li>
+                                    <li>Rating</li>
+                                    <li>Tour</li>
+                                    <li>Cropper</li>
+                                    <li>Range Slider</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative ">
+                                    <i class="fa-solid fa-radiation" style="margin-right: 20px;"></i>
+                                    <span>animations</span>
+                                </div>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-right-from-bracket" style="margin-right: 20px;"></i>
+                                    <span>form elements</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Form Elements</li>
+                                    <li>Form Layouts</li>
+                                    <li>Form Validation</li>
+                                    <li>Form Wizard</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-chart-simple" style="margin-right: 20px;"></i>
+                                    <span>charts</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Chart JS</li>
+                                    <li>Morris Chart</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-table" style="margin-right: 20px;"></i>
+                                    <span>tables</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Basic Tables</li>
+                                    <li>Data tables</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-regular fa-newspaper" style="margin-right: 20px;"></i>
+                                    <span>popups</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Sweet Alerts</li>
+                                    <li>Toast</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-regular fa-pen-to-square" style="margin-right: 20px;"></i>
+                                    <span>icons</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Fontawesome</li>
+                                    <li>Flaticons</li>
+                                    <li>Materialize</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-location-dot" style="margin-right: 20px;"></i>
+                                    <span>maps</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Google Maps</li>
+                                    <li>Vector Maps</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-file" style="margin-right: 20px;"></i>
+                                    <span>pages</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Authentication</li>
+                                    <li>Coming Soon</li>
+                                    <li>FAQ</li>
+                                    <li>Portfolio</li>
+                                    <li>Toast</li>
+                                    <li>User Profile</li>
+                                    <li>Invoice</li>
+                                </ul>
+                            </li>
+                            <li class="sub-btn text-capitalize fw-bold">
+                                <div class="side-sub-menu position-relative">
+                                    <i class="fa-solid fa-mobile-screen-button" style="margin-right: 20px;"></i>
+                                    <span>apps</span>
+                                    <i class="down-arrow position-absolute fa-solid fa-angle-down"></i>
+                                </div>
+                                <ul class="side-sub-menu-list m-o list-unstyled">
+                                    <li>Chat</li>
+                                    <li>Email</li>
+                                    <li>To-do List</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right side bar -->
+            <div class="right-bar position-fixed">
+                        <ul class="nav nav-tabs m-0" id="ex1" role="tablist">
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link active d-flex flex-column align-items-center" id="ex1-tab-21" data-bs-toggle="tab" href="#ex1-tabs-21" role="tab" aria-controls="ex1-tabs-21" aria-selected="true" >
+                            <i class="fa-regular fa-comments"></i>
+                            <span>chat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-22" data-bs-toggle="tab" href="#ex1-tabs-22" role="tab" aria-controls="ex1-tabs-22" aria-selected="false" >
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>email</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-23" data-bs-toggle="tab" href="#ex1-tabs-23" role="tab" aria-controls="ex1-tabs-23" aria-selected="false" >
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span>to-do</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-24" data-bs-toggle="tab" href="#ex1-tabs-24" role="tab" aria-controls="ex1-tabs-24" aria-selected="false" >
+                            <i class="fa-regular fa-bell"></i>
+                            <span>remainder</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-25" data-bs-toggle="tab" href="#ex1-tabs-25" role="tab" aria-controls="ex1-tabs-25" aria-selected="false" >
+                            <i class="fa-solid fa-book"></i>
+                            <span>notes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-26" data-bs-toggle="tab" href="#ex1-tabs-26" role="tab" aria-controls="ex1-tabs-26" aria-selected="false" >
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>invite</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item" role="presentation" onclick="myFunction()">
+                        <a class="nav-link d-flex flex-column align-items-center" id="ex1-tab-27" data-bs-toggle="tab" href="#ex1-tabs-27" role="tab" aria-controls="ex1-tabs-27" aria-selected="false" >
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>configue</span>
+                        </a>
+                    </li> -->
+                        </ul>
+                        <div >         
+                            <div class="tab-content" id="myDIV">
+                                <div class="tab-pane fade show active" id="ex1-tabs-21" role="tabpanel" aria-labelledby="ex1-tab-21">
+                                    <div class="right-tab-title text-white d-flex justify-content-between align-items-center" >
+                                        <h4 class="m-0">Chat</h4>
+                                        <i onclick="removeClass()"
+                                        class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    <div class="chat-box-one d-flex align-items-center gap-4">
+                                        <div class="img-chat-status chat-online position-relative">
+                                            <img src="./images/people-5.jpg" class="rounded-circle" width="40px" alt="">
+                                        </div>
+                                        <div class="chat-detail">
+                                            <h6 class="m-0">Anny Farisha</h6>
+                                            <div class="dropdown">
+                                                <button class="btn text-white p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Available<i class="fa-solid fa-chevron-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="text-white dropdown-item" href="#">Busy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="text-white dropdown-item" href="#">Away</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="text-white dropdown-item" href="#">Offline</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-search d-flex justify-content-between align-items-center">
+                                        <input type="text" class="w-100" placeholder="Search people and group">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="tab-button">
+                                        <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active text-white" id="ex1-tab-11" data-bs-toggle="tab" href="#ex1-tabs-11" role="tab" aria-controls="ex1-tabs-11" aria-selected="true">Charts</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="ex1-tab-12" data-bs-toggle="tab" href="#ex1-tabs-12" role="tab" aria-controls="ex1-tabs-12" aria-selected="false">Groups</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="ex1-tab-13" data-bs-toggle="tab" href="#ex1-tabs-13" role="tab" aria-controls="ex1-tabs-13" aria-selected="false">Contacts</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content " id="ex1-content">
+                                            <div class="chat-tabs tab-pane fade show active" id="ex1-tabs-11" role="tabpanel" aria-labelledby="ex1-tab-11">
+                                            <div class="chat-box-one d-flex align-items-center gap-3">
+                                                <div class="chart-status status-away position-relative">
+                                                    <span class="msg-count">3</span>
+                                                    <img class="rounded-circle img-fluid" src="./images/people-11.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">James Zathila</h6>
+                                                    <span class="chat-time">2 Hours ago</span>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                                                </div>
+                                            </div>                                    
+                                            <div class="chat-box-one d-flex align-items-center gap-3">
+                                                <div class="chart-status status-online position-relative">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-10.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>
+                                                    <span class="chat-time">3 Hours ago</span>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box-one d-flex align-items-center gap-3">
+                                                <div class="chart-status status-offline position-relative">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-8.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Heather Brown</h6>
+                                                    <span class="chat-time">12 Hours ago</span>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box-one d-flex align-items-center gap-3">
+                                                <div class="chart-status status-busy position-relative">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-7.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Micheal John</h6>
+                                                    <span class="chat-time">Yesterday</span>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box-one d-flex align-items-center gap-3">
+                                                <div class="chart-status status-online position-relative">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-12.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">John Doe</h6>
+                                                    <span class="chat-time">3Days</span>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="group-tabs tab-pane fade" id="ex1-tabs-12" role="tabpanel" aria-labelledby="ex1-tab-12">
+                                            <div class="chat-box-two d-flex align-items-center gap-3">
+                                                <div class="chat-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-3.jpg" alt="">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <h6 class="m-0">James Zathila</h6>
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <ul class="group-member m-0 list-unstyled">
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-12.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-5.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-7.jpg" alt="">
+                                                        </li>
+                                                        <li class="group-count">
+                                                            + 12 more 
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box-two d-flex align-items-center gap-3">
+                                                <div class="chat-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-12.jpg" alt="">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <ul class="group-member m-0 list-unstyled">
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-11.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-8.jpg" alt="">
+                                                        </li>                                                
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box-two d-flex align-items-center gap-3">
+                                                <div class="chat-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-12.jpg" alt="">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <h6 class="m-0">James Zathila</h6>
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                    <ul class="group-member m-0 list-unstyled">
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-3.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-8.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img class="rounded-circle img-fluid" src="./images/people-10.jpg" alt="">
+                                                        </li>
+                                                        <li class="group-count">
+                                                            + 4 more 
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="contact-tabs tab-pane fade" id="ex1-tabs-13" role="tabpanel" aria-labelledby="ex1-tab-13">
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-12.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">John Doe</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-7.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div> 
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-5.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Micheal John</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>  
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-3.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Heather Brown</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>  
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-7.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-7.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>   
+                                            <div class="contact-box-one d-flex align-items-center gap-3">
+                                                <div class="contact-img">
+                                                    <img class="rounded-circle img-fluid" src="./images/people-7.jpg"  alt="">
+                                                </div>
+                                                <div class="chat-user-info position-relative">
+                                                    <h6 class="m-0">Raymart Sandiago</h6>                                            
+                                                    <i class="chat-time fa-regular fa-comments"></i>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                                </div>
+                                            </div>         
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="email-tab-box-main tab-pane fade" id="ex1-tabs-22" role="tabpanel" aria-labelledby="ex1-tab-22">
+                                <div class="right-tab-title text-white d-flex justify-content-between align-items-center">
+                                    <h4 class="m-0">Email</h4>
+                                    <i class="fa-solid fa-xmark" onclick="removeClass()"></i>
+                                </div>
+                                <div class="email-box">
+                                    <div class="email-btn">
+                                        <button class="text-white w-100 d-flex justify-content-center align-items-center gap-2"><i class="fa-solid fa-pencil"></i>Compose Email</button>
+                                    </div>
+                                    <div class="contact-box-one d-flex align-items-center gap-3">
+                                        <div class="contact-img">
+                                            <img class="rounded-circle img-fluid" src="./images/people-12.jpg"  alt="">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <h6 class="m-0">James Zathila</h6>
+                                            <span class="chat-time text-white">2 Hours ago</span>                                            
+                                            <h5 class="m-0">[WordPress] New Comment</h5>
+                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-box-one d-flex align-items-center gap-3">
+                                        <div class="contact-img">
+                                            <img class="rounded-circle img-fluid" src="./images/people-5.jpg"  alt="">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <h6 class="m-0">John Doe</h6>
+                                            <span class="chat-time text-white">3 Hours ago</span>                                            
+                                            <h5 class="m-0">[WordPress] New Comment</h5>
+                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-box-one d-flex align-items-center gap-3">
+                                        <div class="contact-img">
+                                            <img class="rounded-circle img-fluid" src="./images/people-3.jpg"  alt="">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <h6 class="m-0">Heather Brown</h6>
+                                            <span class="chat-time text-white">1 Days ago</span>                                            
+                                            <h5 class="m-0">[WordPress] New Comment</h5>
+                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                                <div class="todo-tab-box-main tab-pane fade" id="ex1-tabs-23" role="tabpanel" aria-labelledby="ex1-tab-23">
+                                    <div class="right-tab-title text-white d-flex justify-content-between align-items-center">
+                                        <h4 class="m-0">To-do-list</h4>
+                                        <i class="fa-solid fa-xmark" onclick="removeClass()"></i>
+                                    </div>
+                                    <div class="todo-box">
+                                    <div class="todo-input">
+                                        <input type="text" placeholder="Add Task Block">
+                                        <button class="task-btn text-white d-flex justify-content-center align-items-center" type="submit"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <div class="task-block-list">
+                                        <ul class="list-unstyled m-0">
+                                            <div class="task-header d-flex justify-content-between align-items-center">
+                                                <h4 class="m-0">Task Block Title</h4>
+                                                <button class="task-add-btn text-white d-flex justify-content-center align-items-center" type="submit"><i class="fa-solid fa-plus"></i></button>
+                                            </div>
+                                            <li>
+                                                <div class="form-check position-relative d-flex align-items-center gap-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">Task to do</label>
+                                                    <i class="del-task position-absolute fa-solid fa-trash-can"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check position-relative d-flex align-items-center gap-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">Task to do</label>
+                                                    <i class="del-task position-absolute fa-solid fa-trash-can"></i>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="archieve-tab d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-box-archive"></i>
+                                                    <span>Archieve</span>
+                                                </div>
+                                                <div class="delete-tab d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-trash-can"></i>
+                                                    <span class="">Delete</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+        
+                                    </div>
+        
+                                    </div>
+                                </div>
+                                <div class="remainder-tab-box-main tab-pane fade" id="ex1-tabs-24" role="tabpanel" aria-labelledby="ex1-tab-24">
+                                    <div class="right-tab-title text-white d-flex justify-content-between align-items-center">
+                                        <h4 class="m-0">Reminders</h4>
+                                        <i class="fa-solid fa-xmark" onclick="removeClass()"></i>
+                                    </div>
+                                    <div class="remainder-box">
+                                    <div class="remainder-title d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-bell"></i>
+                                        <span>New Reminder</span>
+                                    </div>
+                                    <div class="remainder-data">
+                                        <div class="remainder-data-one">
+                                            <p class="">Developer Meeting in Block B</p>
+                                            <span class="d-flex align-items-center gap-2"><i class="fa-regular fa-clock"></i>Today - 3:45 pm</span>
+                                        </div>
+                                        <div class="edit-data d-flex justify-content-end gap-3">
+                                            <div class="archieve-tab d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-pencil"></i>
+                                                <span data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</span>
+                                            </div>
+                                            <div class="delete-tab d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                <span>Delete</span>
+                                            </div>
+                                        </div>               
+                                    </div>
+                                    <div class="remainder-data mt-3">
+                                        <div class="remainder-data-one">
+                                            <p class="">Start adding change log to version 2</p>
+                                            <span class="d-flex align-items-center gap-2"><i class="fa-regular fa-clock"></i>Tomorrow - 12:00 pm</span>
+                                        </div>
+                                        <div class="edit-data d-flex justify-content-end gap-3">
+                                            <div class="archieve-tab d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-pencil"></i>
+                                                <span data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</span>
+                                            </div>
+                                            <div class="delete-tab d-flex align-items-center gap-2">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                <span>Delete</span>
+                                            </div>
+                                        </div>               
+                                    </div>
+        
+                                    </div>
+                                </div>
+                                <div class="notes-tab-box-main tab-pane fade" id="ex1-tabs-25" role="tabpanel" aria-labelledby="ex1-tab-25">
+                                    <div class="right-tab-title text-white d-flex justify-content-between align-items-center">
+                                        <h4 class="m-0">Notes</h4>
+                                        <i class="fa-solid fa-xmark" onclick="removeClass()"></i>
+                                    </div>
+                                    <div class="notes-box">
+                                        <div class="notes-title d-flex justify-content-between align-items-center gap-2">
+                                            <div class="archieve-tab d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal-one">
+                                                <i class="fa-regular fa-note-sticky"></i>
+                                                <span>New Note</span>
+                                            </div>
+                                            <div class="archieve-tab d-flex align-items-center gap-2">
+                                                <i class="fa-regular fa-file-excel"></i>
+                                                <span>Export to Excel</span>
+                                            </div>
+                                        </div>
+                                        <div class="notes-data">
+                                            <div class="notes-data-one">
+                                                <p class="m-0">Don't forget to check with the designer</p>
+                                            </div>
+                                            <div class="notes-data-two d-flex flex-column gap-2">
+                                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque, vel varius metus. Pellentesque eget orci malesuada, venenatis magna et</p>
+                                                <ul class="list-unstyled m-0">
+                                                    <li>
+                                                        <img class="img-fluid rounded-circle" src="./images/people-11.jpg" alt="">
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-fluid rounded-circle" src="./images/people-11.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="edit-data d-flex justify-content-between align-items-center gap-2">
+                                                <div class="dropdown">                                                   
+                                                    <div class="archieve-tab d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-share-nodes"></i>
+                                                        <span>Share</span>
+                                                    </div>
+                                                        <ul class="dropdown-menu">
+                                                            <h4 class="m-0">Share With</h4>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-8.jpg" width="30px" alt="">John doe</a></li>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-12.jpg" width="30px" alt="">Reymart Sandiago</a></li>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-10.jpg" width="30px" alt="">Heather Brown</a></li>
+                                                        </ul>
+                                                </div>                                        
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="archieve-tab d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal-one">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                        <span>Edit</span>
+                                                    </div>
+                                                    <div class="delete-tab d-flex align-items-center gap-2">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                        <span>Delete</span>
+                                                    </div>
+                                                </div>
+                                            </div>               
+                                        </div>
+                                        <div class="notes-data">
+                                            <div class="notes-data-one">
+                                                <p class="m-0">Perform the required unit tests</p>
+                                            </div>
+                                            <div class="notes-data-two d-flex flex-column gap-2">
+                                                <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque, vel varius metus. Pellentesque eget orci malesuada, venenatis magna et</p>
+                                                <ul class="list-unstyled m-0">
+                                                    <li>
+                                                        <img class="img-fluid rounded-circle" src="./images/people-7.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="edit-data d-flex justify-content-between align-items-center gap-2">
+                                                <div class="dropdown">                                                   
+                                                    <div class="archieve-tab d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-share-nodes"></i>
+                                                        <span>Share</span>
+                                                    </div>
+                                                        <ul class="dropdown-menu">
+                                                            <h4 class="m-0">Share With</h4>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-8.jpg" width="30px" alt="">John doe</a></li>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-12.jpg" width="30px" alt="">Reymart Sandiago</a></li>
+                                                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><img class="img-fluid rounded-circle" src="./images/people-10.jpg" width="30px" alt="">Heather Brown</a></li>
+                                                        </ul>
+                                                </div> 
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="archieve-tab d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal-one">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                        <span>Edit</span>
+                                                    </div>
+                                                    <div class="delete-tab d-flex align-items-center gap-2">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                        <span>Delete</span>
+                                                    </div>
+                                                </div>
+                                            </div>               
+                                        </div>
+            
+                                    </div>
+                                </div>
+                                <div class="invite-tab-box-main tab-pane fade" id="ex1-tabs-26" role="tabpanel" aria-labelledby="ex1-tab-26">
+                                    <div class="right-tab-title text-white d-flex justify-content-between align-items-center">
+                                        <h4 class="m-0">Invite Members</h4>
+                                        <i class="fa-solid fa-xmark" onclick="removeClass()"></i>
+                                    </div>
+                                    <div class="member-group text-center">
+                                        <i class="fa-solid fa-people-group"></i>
+                                        <p>Invite Team Members</p>
+                                        <form action="">
+                                            <input type="text" placeholder="Member email" class="form-control">
+                                            <button type="submit" class="btn btn-primary w-100">Invite</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <div class="main-header-bar" id="open-side-menu-two">
+                <!-- header bar -->
+                <div class="header-menu d-flex justify-content-between align-items-center gap-2">
+                    <div>
+                        <i class="fa-solid fa-bars" onclick="onclickmenu()"></i>
+                    </div>
+                    <div class="d-flex align-items-center gap-4 menu-bar-header">
+                        <div class="input-search d-flex justify-content-between align-items-center">
+                            <input type="text" placeholder="Search here...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="dropdown">
+                            <button
+                                class="btn"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="red-note position-relative fa-regular fa-envelope"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <h4 class="m-0 drop-title position-relative">Mail</h4>
+                                <ul class="list-unstyled text-white m-0">
+                                    <li class="">
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="img-chat-status chat-offline position-relative">
+                                                    <img
+                                                        src="./images/people-5.jpg"
+                                                        class="rounded-circle"
+                                                        width="40px"
+                                                        alt=""
+                                                    >
+                                                </div>
+                                                <div class="drop-list text-white">
+                                                    <span>
+                                                        Hey man, looking forward to your
+                                                        <br>
+                                                        new project.
+                                                    </span>
+                                                    <p class="m-0 d-flex align-items-center gap-2">
+                                                        <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                        30 seconds ago
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="img-chat-status chat-online position-relative">
+                                                    <img
+                                                        src="./images/people-12.jpg"
+                                                        class="rounded-circle"
+                                                        width="40px"
+                                                        alt=""
+                                                    >
+                                                </div>
+                                                <div class="drop-list text-white">
+                                                    <span>
+                                                        Dear John, I was told you bought
+                                                        <br>
+                                                        mylo! Send me your feedback
+                                                    </span>
+                                                    <p class="m-0 d-flex align-items-center gap-2">
+                                                        <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                        28 seconds ago
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="img-chat-status chat-offline position-relative">
+                                                    <img
+                                                        src="./images/people-12.jpg"
+                                                        class="rounded-circle"
+                                                        width="40px"
+                                                        alt=""
+                                                    >
+                                                </div>
+                                                <div class="drop-list text-white">
+                                                    <span>
+                                                        How many people are we inviting to
+                                                        <br>
+                                                        the dashboard?
+                                                    </span>
+                                                    <p class="m-0 d-flex align-items-center gap-2">
+                                                        <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                        6 hours ago
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <h5 class=" m-0 text-center text-white">Go To Inbox</h5>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bell-drop-down">
+                            <div class="dropdown">
+                                <button
+                                    class="btn"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <i class="red-note position-relative fa-regular fa-bell"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <h4 class="m-0 drop-note position-relative">Notifications</h4>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span>12 ways to improve your crypto dashboard</span>
+                                            <p class="m-0 d-flex align-items-center gap-2">
+                                                <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                30 seconds ago
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span>You have newly registered users</span>
+                                            <p class="m-0 d-flex align-items-center gap-2">
+                                                <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                45 minutes ago
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span>
+                                                Your account was logged in from an
+                                                <br>
+                                                unauthorized IP
+                                            </span>
+                                            <p class="m-0 d-flex align-items-center gap-2">
+                                                <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                2 hours ago
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span>An application form has been submitted</span>
+                                            <p class="m-0 d-flex align-items-center gap-2">
+                                                <i class="d-flex align-items-center fa-regular fa-clock"></i>
+                                                1 day ago
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <h5 class="m-0 text-center text-white">view all Notifications</h5>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="canvas-one z-1">
+                            <button
+                                class="border-0 bg-transparent"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight"
+                            >
+                                <i class="fa-solid fa-braille"></i>
+                            </button>
+                            <div
+                                class="offcanvas offcanvas-end"
+                                tabindex="-1"
+                                id="offcanvasRight"
+                                aria-labelledby="offcanvasRightLabel"
+                            >
+                                <div class="offcanvas-header">
+                                    <button
+                                        type="button"
+                                        class="bg-transparent btn-close text-reset"
+                                        data-bs-dismiss="offcanvas"
+                                        aria-label="Close"
+                                    >
+                                        <i class="text-white fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="nav  nav-tabs mb-3" id="ex1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a
+                                                class="nav-link active"
+                                                id="ex1-tab-1"
+                                                data-bs-toggle="tab"
+                                                href="#ex1-tabs-1"
+                                                role="tab"
+                                                aria-controls="ex1-tabs-1"
+                                                aria-selected="true"
+                                            >Active Log</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a
+                                                class="nav-link"
+                                                id="ex1-tab-2"
+                                                data-bs-toggle="tab"
+                                                href="#ex1-tabs-2"
+                                                role="tab"
+                                                aria-controls="ex1-tabs-2"
+                                                aria-selected="false"
+                                            >Settings</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="ex1-content">
+                                        <div
+                                            class="tab-pane fade show active"
+                                            id="ex1-tabs-1"
+                                            role="tabpanel"
+                                            aria-labelledby="ex1-tab-1"
+                                        >
+                                            <ul class="tab-one-data list-unstyled m-0">
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-grey d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-gear"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Update 1.0.0 Pushed</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                1 January, 2024
+                                                            </span>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-green d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Profile Updated</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                1 January, 2024
+                                                            </span>
+                                                            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-orange d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-triangle-exclamation"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Update 1.0.0 Pushed</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                4 March, 2024
+                                                            </span>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-red d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Database Error</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                4 March, 2024
+                                                            </span>
+                                                            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-skyblue d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Checkout what's Trending</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                4 March, 2024
+                                                            </span>
+                                                            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="box-one d-flex gap-3">
+                                                        <div class="canvas-icon icon-bg-skyblue d-flex justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-gem"></i>
+                                                        </div>
+                                                        <div class="title-text">
+                                                            <h6>Your Dashboard is ready</h6>
+                                                            <span>
+                                                                <i class="fa-solid fa-calendar-week pe-2"></i>
+                                                                4 March, 2024
+                                                            </span>
+                                                            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <div class="view-btn">
+                                                    <button class="btn btn-primary d-block w-100">View All</button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                        <div
+                                            class="tab-pane fade"
+                                            id="ex1-tabs-2"
+                                            role="tabpanel"
+                                            aria-labelledby="ex1-tab-2"
+                                        >
+                                            <div class="tab-two-data text-white">
+                                                <h6>General Settings</h6>
+                                                <div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Location Tracking</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckDefault"
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Allow Notifications</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckDefault"
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Allow Popups</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckChecked"
+                                                            checked
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <h6>Log Settings</h6>
+                                                <div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Enable Logging</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckChecked"
+                                                            checked
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Audit Logs</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckDefault"
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Error Logs</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckChecked"
+                                                            checked
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <h6>Advanced Settings</h6>
+                                                <div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Enable Logging</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckChecked"
+                                                            checked
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Audit Logs</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckDefault"
+                                                        >
+                                                    </div>
+                                                    <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Error Logs</label>
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            role="switch"
+                                                            id="flexSwitchCheckChecked"
+                                                            checked
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-dropmenu">
+                            <div class="dropdown acc-img">
+                                <button
+                                    class="btn"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <img src="./images/people-5.jpg" class="rounded-circle" alt="">
+                                </button>
+                                <ul class="dropdown-menu text-white">
+                                    <h4>Welcome, Anny Farisha</h4>
+                                    <li class="">
+                                        <a class="d-flex align-items-center gap-2 text-white dropdown-item" href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="d-flex align-items-center gap-2 text-white dropdown-item" href="#">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            Inbox
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="d-flex align-items-center gap-2 text-white dropdown-item" href="#">
+                                            <i class="fa-solid fa-gear"></i>
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="d-flex align-items-center gap-2 text-white dropdown-item" href="#">
+                                            <i class="fa-solid fa-lock"></i>
+                                            Lock
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="d-flex align-items-center gap-2 text-white dropdown-item" href="#">
+                                            <i class="fa-solid fa-power-off"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            
+            
+
+
+  
+<!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Reminder</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+            <div class="data-input">
+                <label for="">Remind me about</label>
+                <textarea class="form-control" name="Reminder" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Repeat Daily</label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-data">
+                        <input type="date" class="w-100">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">12:00 pm</option>
+                        <option value="2">1:00 pm</option>
+                        <option value="3">2:00 pm</option>
+                        <option value="4">3:00 pm</option>
+                        <option value="5">4:00 pm</option>
+                    </select>
+                </div>
+            </div>
+                </div>
+                <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Reminder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal two-->
+    <div class="modal fade" id="exampleModal-one" tabindex="-1" aria-labelledby="exampleModalLabel-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel-one">New Note</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+             <div class="mb-3 data-input">
+                <label for="formGroupExampleInput" class="form-label">Note Title</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>       
+            <div class="data-input">
+                <label for="">Note Description</label>
+                <textarea class="form-control" name="Reminder" id="" cols="30" rows="10"></textarea>
+            </div>
+           
+                </div>
+                <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                
+
+
+    </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    function myFunction() {
+   var element = document.getElementById("myDIV");
+   element.classList.add("mystyle");
+}
+function removeClass() {
+   var element = document.getElementById("myDIV");
+   element.classList.remove("mystyle");
+}
+
+function onclickmenu() {
+    var firstclass = document.getElementById("open-side-menu");
+            var div2 = document.getElementById("open-side-menu-two");
+            firstclass.classList.toggle("class1");
+            div2.classList.toggle("class2");
+}
+
+var header = document.getElementById("sub-list-data");
+    var btns = header.getElementsByClassName("sub-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+
+</script>
+<script>
+    $(document).ready(function(){
+
+
+$(".side-sub-menu-list").hide();
+  
+  
+  $('#toggle > li > .side-sub-menu').click(function () {
+      var $ul = $(this).siblings('ul');
+      if ($ul.length > 0) {
+              $ul.slideToggle(600);
+              $(".side-sub-menu-list").not($ul).slideUp(400);
+              return false;
+      }
+  });
+});
+</script>
+
+
